@@ -371,6 +371,22 @@ const bills = [
     },
     pointRate: 0.01,
   },
-];
-
+]
 // Start coding here
+let totalBills = bills.reduce((sum,start) => sum + start.total,0)
+totalBills = `Total bill transaction is ${totalBills}`;
+console.log(totalBills);
+
+
+// กำหนดให้ bills เก็บรายการสั่งซื้อสินค้าเป็น Array ที่มี Value เป็น Object ของแต่ละรายการสั่งซื้อ
+// ซึ่งแต่ละ Object จะประกอบไปด้วย Property ดังนี้
+// id คือ Property ที่มี Value เป็นรหัสประจำรายการสั่งซื้อชุดนั้น
+// transactionDate คือ Property ที่มี Value เป็น String ที่เก็บข้อมูลวันที่ที่มีการชำระเงิน
+// total คือ Property ที่มี Value เป็น Number ที่เก็บข้อมูลยอดชำระทั้งหมด
+// location คือ Property ที่มี Value เป็น String ที่เก็บข้อมูลสถานที่ที่มีการชำระเงิน
+// paymentType คือ Property ที่มี Value เป็น String ที่เก็บข้อมูลวิธีการชำระเงิน
+// member คือ Property ที่มี Value เป็น Object ที่เก็บข้อมูลสมาชิก
+// ให้หายอดชำระรวมทั้งหมดใน bills โดยใช้ Built-in Array Function
+// เมื่อโปรแกรมทำงานสำเร็จ ควรจะแสดงผลลัพธ์ทางหน้าจอแบบนี้
+// "Total bill transaction is 1410083";
+
